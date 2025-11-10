@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+}
+
+/* Sidebar container */
+.sidebar {
+    position: fixed ;
+    width: 330px;
+    height: auto;
+    background-color: #273036;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Top section (logo + menu) */
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  width: 298px;
+  height: 71px;
+  margin-top: 40px;
+  margin: 30px 0;
+}
+
+.profile-card {
+  background-color: #9ca3af;
+  color: black;
+  width: 80%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.profile-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.profile-card .role, .profile-card .job-type {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.update-btn {
+  margin-top: 10px;
+  background-color: #1da34a;
+  color: black;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #15913e;
+}
+
+/* Menu styling */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu li {
+  background-color: #9ca3af;
+  width: 80%;
+  margin: 12px auto;
+  border-radius: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu li:hover {
+  background-color: #b0b5bb;
+}
+
+.menu li img.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+}
+
+.menu li span {
+  font-size: 18px;
+  color: #000;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Bottom admin section */
+.bottom-section {
+  margin-bottom: 30px;
+}
+
+.admin {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  gap: 30px;
+}
+
+.admin-icon {
+    margin-top: 20px;
+    margin-left: 140px ;
+    float: right;
+    width: 140px;
+    height: 40px;
+}
+
+
+
+
+/* Main Content */
+.main-content {
+  margin-left: 330px;
+  width: calc(100% - 330px);
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.role-tag {
+  background: #273036;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  width: 200px;
+}
+
+.home-icon {
+  width: 28px;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
