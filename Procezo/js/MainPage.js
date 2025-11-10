@@ -11,6 +11,7 @@ $(document).ready(function () {
     });
 });
 
+
 /* JavaScript to Smooth Scrolling */
 $(document).ready(function () {
     $("a").on('click', function (event) {
@@ -22,6 +23,25 @@ $(document).ready(function () {
             }, 800, function () {
                 window.location.hash = hash;
             });
+        }
+    });
+});
+
+
+/* JavaScript to Toggle dropdown on click */
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    
+    dropdownToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      dropdownMenu.classList.toggle("show");
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".dropdown")) {
+            dropdownMenu.classList.remove("show");
         }
     });
 });

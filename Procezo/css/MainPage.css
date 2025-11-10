@@ -54,7 +54,6 @@ header {
   padding: 0 40px;
 }
 
-/* Logo (hidden until scroll) */
 .navbar-logo {
   width: 298px;
   height: 71px;
@@ -63,8 +62,6 @@ header {
   transition: opacity 0.5s ease;
 }
 
-
-/* ////......Navbar solid effect on scroll......//// */
 .navbar.solid .navbar-logo {
   display: block;
   opacity: 1;
@@ -83,12 +80,11 @@ header {
 }
 
 .navbar.solid .btn-login {
-  background: #1f2937;
+  background: #273036;
   color: white;
   transition: 0.3s ease;
 }
 
-/* Navbar menu */
 .menu-items {
   display: flex;
   list-style: none;
@@ -102,11 +98,6 @@ header {
   font-weight: 600;
 }
 
-.menu-items a:hover {
-  border-bottom: 2px solid #fff;
-}
-
-/* Login button */
 .btn-login {
   margin-left: 100px;
   margin-right: 50px;
@@ -119,6 +110,78 @@ header {
   font-weight: 600;
   font-family: cursive;
   cursor: pointer;
+}
+
+/* ================= DROPDOWN MENU ================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: -300px;
+  width: 1200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px black;
+  padding: 30px;
+  z-index: 2000;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Layout inside dropdown */
+.dropdown-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.dropdown-column h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.dropdown-column p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.dropdown-panel {
+  background: #273036;
+  color: white;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropdown-panel h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.dropdown-panel p {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 
@@ -639,7 +702,7 @@ header {
 }
 
 .btn {
-  background: #1f2937;
+  background: #273036;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -674,7 +737,7 @@ header {
 .promo h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #1f2937;
+  color: #273036;
 }
 
 .promo p {
@@ -699,7 +762,7 @@ header {
 .email-form button {
   padding: 0.75rem 1.25rem;
   font-size: 1rem;
-  background-color: #1f2937;
+  background-color: #273036;
   color: white;
   border: none;
   border-radius: 4px;
@@ -764,7 +827,7 @@ header {
 .download-button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #1f2937; 
+  background-color: #273036; 
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
@@ -774,7 +837,7 @@ header {
 }
 
 .download-button:hover {
-  background-color: #444444;
+  background: #111827;
 }
 
 /* ////......Nav Columns......//// */
@@ -817,7 +880,7 @@ header {
 }
 
 .nav-group ul li a:hover {
-  color: #444444;;
+  color: #444444;
 }
 
 
@@ -848,7 +911,7 @@ header {
   margin-left: 280px;
   justify-content: center;
   align-items: center;
-  background-color: #1f2937;
+  background-color: #273036;
   border-radius: 10px;
   padding: 20px;
   height: 50px;
@@ -896,7 +959,7 @@ header {
   height: 25px;
   border-radius: 50%;
   color: #fff;
-  background-color: #1f2937;
+  background-color: #273036;
   transition: all 0.3s ease-in-out;
   font-family: monospace;
   font-weight: 600;
@@ -946,7 +1009,7 @@ header {
 }
 
 .footer-nav-links a:hover {
-  color: #1f2937;
+  color: #273036; /*  change cheyanam */
 }
 
 
