@@ -1264,7 +1264,7 @@ header {
   /* Show smaller logo for mobile */
   .navbar-logo {
     display: block !important;
-    width: 180px;
+    width: 300px;
   }
 
   /* Adjust home section text and buttons */
