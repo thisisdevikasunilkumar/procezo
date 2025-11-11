@@ -1441,6 +1441,26 @@ header {
     height: auto;
   }
 
+  .core-capability-section {
+    padding: 35px 4%;
+  }
+
+  .core-capability-card .text-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .core-capability-card .overlay-text h2 {
+    font-size: 0.7rem;
+  }
+
+  .core-capability-card p {
+    font-size: 0.9rem;
+  }
+
+  .core-capability-card .text-card a {
+    font-size: 0.88rem;
+  }
+
   /* Compact feature cards */
   .feature-card {
     padding: 15px;
