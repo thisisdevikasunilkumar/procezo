@@ -3,70 +3,97 @@ body {
   background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
   font-family: 'Segoe UI', sans-serif;
   display: flex;
+  min-height: 100vh;
 }
 
 /* Sidebar container */
 .sidebar {
-    position: fixed ;
-    width: 330px;
-    height: auto;
-    background-color: #273036;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 0;
+  position: fixed;
+  width: 330px;
+  height: 100vh;
+  background-color: #273036;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
-/* Top section (logo + menu) */
+/* Top section (logo + menu + profile) */
 .top-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 /* Logo styling */
 .logo {
-  width: 298px;
-  height: 71px;
-  margin-top: 40px;
+  width: 80%;
+  max-width: 298px;
+  height: auto;
   margin: 30px 0;
 }
 
 .profile-card {
+  display: flex;
   background-color: #9ca3af;
   color: black;
-  width: 80%;
+  width: 75%;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.profile-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  margin-left: 20px; 
+  gap: 5px; 
 }
 
 .profile-card img {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: 0;
 }
 
-.profile-card .role, .profile-card .job-type {
-  margin-top: 5px;
-  font-size: 0.9rem;
+.role, .job-type {
+  list-style: none;
+  margin: 0;
+  text-align: right; 
+  font-size: 1.1rem;
+  font-weight: bold;
 }
+
 
 .update-btn {
-  margin-top: 10px;
-  background-color: #1da34a;
+  margin-top: 5px;
+  background-color: #1da34a; 
   color: black;
   border: none;
-  padding: 6px 12px;
+  padding: 5px 15px; 
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline; 
+  font-size: 1.1rem; 
+  align-self: flex-end; 
 }
 
 .update-btn:hover {
   background-color: #15913e;
+  text-decoration: underline;
 }
-
 /* Menu styling */
 .menu {
   list-style: none;
@@ -108,27 +135,25 @@ body {
   color: black;
 }
 
-/* Bottom admin section */
 .bottom-section {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .admin {
   display: flex;
-  align-items: right;
+  align-items: center;
   justify-content: center;
   gap: 30px;
 }
 
 .admin-icon {
-    margin-top: 20px;
-    margin-left: 140px ;
-    float: right;
-    width: 140px;
-    height: 40px;
+  margin-top: 20px;
+  margin-left: 140px ;
+  float: right;
+  width: 140px;
+  height: 40px;
 }
-
-
 
 
 /* Main Content */
@@ -136,13 +161,17 @@ body {
   margin-left: 330px;
   width: calc(100% - 330px);
   padding: 20px;
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease-in-out;
 }
 
 /* Header */
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .role-tag {
@@ -177,8 +206,85 @@ body {
   padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
+  white-space: nowrap; 
 }
 
 .logout-btn:hover {
   background-color: #c0392b;
+}
+
+
+/* ================= RESPONSIVE STYLES ================= */
+/* This section contains all responsive breakpoints for different screen sizes */
+
+/* Medium Screens (e.g., Tablets - 1200px and down) */
+@media (max-width: 1200px) {
+
+}
+
+/* Small Screens (e.g., Mobile - 768px and down) */
+@media (max-width: 768px) {
+    /* Collapse Sidebar into a top bar */
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .top-section {
+        flex-direction: row;
+        width: auto;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 100px;
+        margin: 0;
+    }
+
+    /* Hide the detailed profile card and menu links on small screens */
+    .profile-card,
+    .menu,
+    .bottom-section {
+        display: none;
+    }
+
+    /* Adjust Main Content to account for collapsed sidebar */
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    /* Header adjustments for smaller screens */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h2 {
+        margin-bottom: 10px;
+    }
+    
+    .header-right {
+        width: 100%;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .search-box {
+        width: 50%;
+    }
+
+    .logout-btn {
+        flex-grow: 1;
+        justify-content: center;
+        text-align: center;
+    }
 }
