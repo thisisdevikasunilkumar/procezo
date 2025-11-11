@@ -184,6 +184,17 @@ header {
   font-size: 1rem;
 }
 
+.explore-btn:hover {
+  border-bottom: 2px solid white;
+}
+
+.navbar.solid .menu-items .explore-btn {
+  color: white;
+}
+
+.navbar.solid .menu-items .explore-btn:hover {
+  border-bottom: 2px solid white;
+}
 
 /* ================= HOME SECTION ================= */
 .home {
